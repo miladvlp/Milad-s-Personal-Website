@@ -162,7 +162,7 @@ const Features = () => {
                         </div>
                     </BentoTilt> */}
 
-                    <BentoTilt className='bento-tilt_2'>
+                    {/* <BentoTilt className='bento-tilt_2'>
                         <video
                             src="videos/feature-6.mp4"
                             loop
@@ -170,7 +170,7 @@ const Features = () => {
                             autoPlay
                             className='size-full object-cover object-center'
                         />
-                    </BentoTilt>
+                    </BentoTilt> */}
                 </div>
             </div>
 

@@ -105,7 +105,7 @@ const ProjectDetail = () => {
     useEffect(() => {
         const fetchProject = async () => {
             try {
-                const response = await fetch('/data/projects.json');
+                const response = await fetch(`${import.meta.env.BASE_URL}data/projects.json`);
                 const projectsData = await response.json();
                 const foundProject = projectsData.find(p => p.id === parseInt(id));
                 setProject(foundProject);
@@ -156,7 +156,7 @@ const ProjectDetail = () => {
             <div className="max-w-6xl mx-auto">
                 {/* Hero Image */}
                 <BentoTilt className="relative border-hsla overflow-hidden rounded-2xl h-96 md:h-[500px] w-full mb-12">
-                    <img src={project.image} alt={project.title} className="size-full object-cover object-center" />
+                    <img src={`${import.meta.env.BASE_URL}${project.image}`} alt={project.title} className="size-full object-cover object-center" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 </BentoTilt>
 

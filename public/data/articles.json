@@ -3,7 +3,7 @@
         "id": 101,
         "title": "Practical LLMs: Concepts, Code, and the Future",
         "category": "articles",
-        "image": "/img/101.png",
+        "image": "img/101.png",
         "shortDescription": "Demystifying LLMs: From theory to code with a hands-on Python example.",
         "description": "A comprehensive guide to understanding Large Language Models. We cover the shift from classical ML, explore key applications like RAG and Agents, and build a simple chatbot using Python.",
         "content": [

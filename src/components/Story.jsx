@@ -62,7 +62,7 @@ const Story = () => {
                                     onMouseUp={handleMouseLeave}
                                     onMouseEnter={handleMouseLeave}
                                     onMouseMove={handleMouseMove}
-                                    src='/img/story_img.png'
+                                    src={`${import.meta.env.BASE_URL}img/story_img.png`}
                                     alt='tech-journey'
                                     className='object-contain'
                                 />

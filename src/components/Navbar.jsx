@@ -110,7 +110,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Mobile Menu Button */}
-                        <button 
+                        <button
                             className='md:hidden flex flex-col gap-1.5'
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         >
@@ -121,7 +121,7 @@ const Navbar = () => {
 
                         {/* Audio Button */}
                         <button className='ml-2 md:ml-10 flex items-center space-x-0.5' onClick={toggleConstAudioIndicator}>
-                            <audio ref={audioElementRef} className='hidden' src="/audio/Bato.wav" loop />
+                            <audio ref={audioElementRef} className='hidden' src={`${import.meta.env.BASE_URL}audio/Bato.wav`} loop />
                             {[1, 2, 3, 4].map((bar) => (
                                 <div key={bar} className={`indicator-line ${isIndicatorActive ? 'active' : ''}`}
                                     style={{ animationDelay: `${bar * 0.1}s` }} />

@@ -3,7 +3,7 @@
         "id": 1,
         "title": "Orion Mind",
         "category": "projects",
-        "image": "/img/Orion-Mind.png",
+        "image": "img/Orion-Mind.png",
         "shortDescription": "Your AI assistant hub — chat with any model using OrionMind.",
         "description": "A cross-platform AI chat application built with Flutter, enabling seamless interaction with multiple LLM providers such as Ollama, Gemini, and OpenRouter.",
         "content": [
@@ -63,7 +63,7 @@
         "status": "Active Development",
         "downloadLink": "",
         "githubRepo": "",
-        "liveDemo": "",
+        "liveDemo": "https://miladvlp.github.io/Orion-Mind/",
         "linkVideo": "",
         "generate": "Human | AI"
     }

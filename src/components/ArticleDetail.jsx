@@ -111,7 +111,7 @@ const ArticleDetail = () => {
     useEffect(() => {
         const fetchArticle = async () => {
             try {
-                const response = await fetch('/data/articles.json');
+                const response = await fetch(`${import.meta.env.BASE_URL}data/articles.json`);
                 const articlesData = await response.json();
                 const foundArticle = articlesData.find(a => a.id === parseInt(id));
                 setArticle(foundArticle);
@@ -162,7 +162,7 @@ const ArticleDetail = () => {
             <div className="max-w-6xl mx-auto">
                 {/* Hero Image */}
                 <BentoTilt className="relative border-hsla overflow-hidden rounded-2xl h-96 md:h-[500px] w-full mb-12">
-                    <img src={article.image} alt={article.title} className="size-full object-cover object-center" />
+                    <img src={`${import.meta.env.BASE_URL}${article.image}`} alt={article.title} className="size-full object-cover object-center" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 </BentoTilt>
 

@@ -31,7 +31,7 @@ const ProjectCard = ({ item, onClick }) => {
     return (
         <BentoTilt className="relative border-hsla overflow-hidden rounded-md transition-transform duration-300 ease-out h-96 w-full cursor-pointer group">
             <div onClick={() => onClick(item)} className="size-full relative">
-                <img src={item.image} alt={item.title} className="absolute left-0 top-0 size-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                <img src={`${import.meta.env.BASE_URL}${item.image}`} alt={item.title} className="absolute left-0 top-0 size-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
                 <div className="relative z-10 flex size-full flex-col justify-end p-5 text-blue-50 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
                     <h1 className="bento-title special-font text-3xl">{item.title}</h1>
                     <p className="mt-2 text-sm font-circular-web opacity-80">{item.shortDescription}</p>
@@ -52,8 +52,8 @@ const Projects = () => {
         const fetchData = async () => {
             try {
                 const [projectsRes, articlesRes] = await Promise.all([
-                    fetch('/data/projects.json'),
-                    fetch('/data/articles.json')
+                    fetch(`${import.meta.env.BASE_URL}data/projects.json`),
+                    fetch(`${import.meta.env.BASE_URL}data/articles.json`)
                 ]);
 
                 const projectsData = await projectsRes.json();
