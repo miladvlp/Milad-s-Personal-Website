@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "title": "Orion Mind",
+        "category": "projects",
+        "image": "/img/Orion-Mind.png",
+        "shortDescription": "Your AI assistant hub — chat with any model using OrionMind.",
+        "description": "A cross-platform AI chat application built with Flutter, enabling seamless interaction with multiple LLM providers such as Ollama, Gemini, and OpenRouter.",
+        "content": [
+            {
+                "type": "text",
+                "value": "OrionMind is a cross-platform AI assistant developed with Flutter, designed to provide a unified and flexible environment for interacting with different Large Language Models."
+            },
+            {
+                "type": "text",
+                "value": "For a long time, switching between multiple apps to chat with various LLM providers was a challenge. OrionMind solves this by offering a single interface where you can easily switch between Ollama, Gemini, and OpenRouter at any moment. The system stores the last five conversations, supports internet search, and allows uploading images and documents of various formats."
+            },
+            {
+                "type": "heading",
+                "value": "Key Features"
+            },
+            {
+                "type": "text",
+                "value": "• Switch instantly between Ollama, Gemini, and OpenRouter\n• Store and restore up to five recent conversations\n• Built-in internet search capability\n• Upload and process images and multiple document types\n• Cross-platform support (Android, Windows, Web)\n• Smooth and consistent UI built with Flutter\n• File Search (RAG)"
+            },
+            {
+                "type": "heading",
+                "value": "Technologies Used"
+            },
+            {
+                "type": "text",
+                "value": "• Flutter (primary framework)\n• Dart\n• Gemini API, OpenRouter API, Ollama local models\n• Hive for local storage\n• Provider for state management"
+            },
+            {
+                "type": "heading",
+                "value": "Challenges Addressed"
+            },
+            {
+                "type": "text",
+                "value": "• Ensuring consistent behavior across multiple LLM providers\n• Managing conversation context efficiently\n• Implementing reliable file upload and processing\n• Designing a responsive UI for mobile, desktop, and web"
+            },
+            {
+                "type": "heading",
+                "value": "Future Improvements"
+            },
+            {
+                "type": "text",
+                "value": "• LLM tooling and function calling\n• Open-sourcing the project for community collaboration\n• Multi-language support and customizable agent personalities"
+            },
+            {
+                "type": "text",
+                "value": "OrionMind will soon be released for Android, Windows, and Web.\nIf you're interested in contributing, feel free to reach out."
+            }
+        ],
+        "techStack": [
+            "Flutter",
+            "Dart",
+            "Hive",
+            "GoogleApi",
+            "OpenRouterApi",
+            "Ollama"
+        ],
+        "status": "Active Development",
+        "downloadLink": "",
+        "githubRepo": "",
+        "liveDemo": "",
+        "linkVideo": "",
+        "generate": "Human | AI"
+    }
+]
