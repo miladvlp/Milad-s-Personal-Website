@@ -77,5 +77,87 @@
         "liveDemo": "",
         "linkVideo": "",
         "generate": "AI"
+    },
+    {
+        "id": 102,
+        "title": "Attention Mechanisms with Visual Intuition: A Mental Model Approach",
+        "category": "articles",
+        "image": "img/102.png",
+        "shortDescription": "An intuitive, visualization-driven explanation of attention mechanisms using mental diagrams and step-by-step flow.",
+        "description": "This article explains attention mechanisms by building strong mental visualizations. Instead of relying on images, we guide the reader to visualize attention as flows, matrices, and information mixing processes inside Transformer models.",
+        "content": [
+            {
+                "type": "text",
+                "value": "To truly understand attention, it helps to visualize it as a flow of information rather than just equations. In this tutorial, we will build a clear mental picture of how attention works, step by step, from simplified self-attention to multi-head attention."
+            },
+            {
+                "type": "heading",
+                "value": "Chapter 1: Visualizing Simplified Self-Attention"
+            },
+            {
+                "type": "text",
+                "value": "Imagine three tokens placed horizontally:\n\n[x1]   [x2]   [x3]\n\nNow focus on token x1. Draw arrows from x1 to every token (including itself). Each arrow represents how much x1 \"cares\" about the other tokens.\n\nThe strength of each arrow is computed using a similarity score (dot product). After softmax, thicker arrows mean higher importance.\n\nFinally, imagine mixing all token vectors together using these arrow strengths. The output of x1 is a blended vector — a weighted average of all tokens."
+            },
+            {
+                "type": "heading",
+                "value": "Chapter 2: Self-Attention as a Matrix Operation"
+            },
+            {
+                "type": "text",
+                "value": "Now zoom out and visualize the entire sequence at once.\n\nThink of Queries (Q), Keys (K), and Values (V) as three stacked tables:\n\nQ: one row per token (questions)\nK: one row per token (labels)\nV: one row per token (information)\n\nWhen we compute QKᵀ, imagine every query row comparing itself with every key row. This produces a square attention matrix where:\n- Rows = who is asking\n- Columns = who is being attended to\n\nAfter softmax, each row becomes a probability distribution that sums to 1."
+            },
+            {
+                "type": "heading",
+                "value": "Chapter 3: Visualizing Information Flow"
+            },
+            {
+                "type": "text",
+                "value": "Next, visualize the attention matrix flowing into the value matrix V.\n\nEach row of the attention matrix acts like a mixer knob:\n- High value → more information passes through\n- Low value → information is suppressed\n\nThe result is a new table where each token is enriched with context from all other tokens. No information is copied blindly — everything is filtered."
+            },
+            {
+                "type": "heading",
+                "value": "Chapter 4: Causal Attention as a Triangular Mask"
+            },
+            {
+                "type": "text",
+                "value": "For causal attention, imagine drawing a line down the diagonal of the attention matrix.\n\nEverything above this diagonal is blacked out.\n\nVisually, the matrix becomes a triangle:\n\n[x] .  .\n[x] [x] .\n[x] [x] [x]\n\nThis means:\n- Token 1 sees only itself\n- Token 2 sees token 1 and itself\n- Token 3 sees tokens 1, 2, and itself\n\nFuture information simply does not exist from the model’s perspective."
+            },
+            {
+                "type": "heading",
+                "value": "Chapter 5: Multi-Head Attention as Parallel Lenses"
+            },
+            {
+                "type": "text",
+                "value": "Now imagine running multiple attention blocks side by side.\n\nEach head is a different lens looking at the same sequence:\n- One head focuses on nearby tokens\n- Another head tracks long-distance relationships\n- Another captures grammatical structure\n\nVisually, think of splitting the embedding space into multiple channels, running attention independently, then stitching the results back together."
+            },
+            {
+                "type": "heading",
+                "value": "Chapter 6: Putting It All Together"
+            },
+            {
+                "type": "text",
+                "value": "Attention is not a single operation — it is a pipeline:\n\nTokens → Projections → Similarity Matrix → Masking → Softmax → Weighted Mixing → Output\n\nBy visualizing arrows, matrices, masks, and parallel heads, attention becomes an intuitive data-flow system rather than an abstract formula."
+            },
+            {
+                "type": "heading",
+                "value": "Chapter 7: Final Mental Model"
+            },
+            {
+                "type": "text",
+                "value": "If you remember one image, remember this:\n\nEach token asks a question, compares answers from all tokens, filters the information, and walks away with a context-aware representation.\n\nThat single idea powers modern Transformers and large language models."
+            }
+        ],
+        "techStack": [
+            "Transformers",
+            "Self-Attention",
+            "Linear Algebra",
+            "Deep Learning",
+            "LLMs"
+        ],
+        "downloadLink": "",
+        "githubRepo": "",
+        "liveDemo": "",
+        "linkVideo": "",
+        "generate": "Human | AI"
     }
 ]
